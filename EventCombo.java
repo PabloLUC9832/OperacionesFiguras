@@ -34,9 +34,20 @@ public class EventCombo implements ActionListener{
             case "Rectangulo":
                 System.out.println("Soy un rectangulo");
                 if (app.opcionArea.isSelected()) {
-                    
+                    String b = JOptionPane.showInputDialog(null, "Introduce el valor de la base: ");
+                    double base = Double.parseDouble(b);
+                    String a = JOptionPane.showInputDialog(null, "Introduce el valor de la altura: ");
+                    double altura = Double.parseDouble(a);
+                     Rectangulo rectangulo = new Rectangulo(base, altura);
+                    JOptionPane.showMessageDialog(null,"El area del cuadrado es: "+rectangulo.calcularArea());
                 }else{
-                    
+                    String b = JOptionPane.showInputDialog(null, "Introduce el valor de la base: ");
+                    double base = Double.parseDouble(b);
+                    String a = JOptionPane.showInputDialog(null, "Introduce el valor de la altura: ");
+                    double altura = Double.parseDouble(a);
+
+                    Rectangulo rectangulo = new Rectangulo(base, altura);
+                    JOptionPane.showMessageDialog(null,"El area del cuadrado es: "+rectangulo.calcularPerimetro());
                 }                    
             break;
 
