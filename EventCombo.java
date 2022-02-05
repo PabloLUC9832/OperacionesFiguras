@@ -1,5 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Base64;
+
 import javax.swing.JOptionPane;
 
 public class EventCombo implements ActionListener{
@@ -47,7 +49,7 @@ public class EventCombo implements ActionListener{
                     double altura = Double.parseDouble(a);
 
                     Rectangulo rectangulo = new Rectangulo(base, altura);
-                    JOptionPane.showMessageDialog(null,"El area del cuadrado es: "+rectangulo.calcularPerimetro());
+                    JOptionPane.showMessageDialog(null,"El perimetro del cuadrado es: "+rectangulo.calcularPerimetro());
                 }                    
             break;
 
@@ -56,13 +58,16 @@ public class EventCombo implements ActionListener{
                 if (app.opcionArea.isSelected()) {
                     String l = JOptionPane.showInputDialog(null, "Introduce el valor del lado: ");
                     double lado = Double.parseDouble(l);
-                    Triangulo triangulo = new Traingulo(lado);
+                    String a = JOptionPane.showInputDialog(null, "Introduce el valor de la altura: ");
+                    double altura = Double.parseDouble(a);
+                    Triangulo triangulo = new Triangulo(lado, altura);
                     JOptionPane.showMessageDialog(null,"El area del triangulo es: "+triangulo.calcularArea());  
                 }else{
                     String l = JOptionPane.showInputDialog(null, "Introduce el valor del lado: ");
                     double lado = Double.parseDouble(l);
-                    Traingulo triangulo = new Triangulo(lado);
-                    JOptionPane.showMessageDialog(null,"El area del triangulo es: "+triangulo.calcularPerimetro());    
+                    Triangulo triangulo = new Triangulo(lado);
+                    JOptionPane.showMessageDialog(null,"El perimetro del triangulo es: "+triangulo.calcularPerimetro()); 
+                       
                 }             
             }
             break;
