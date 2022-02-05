@@ -54,9 +54,15 @@ public class EventCombo implements ActionListener{
             case "Triangulo":{
                 System.out.println("Soy un triangulo");
                 if (app.opcionArea.isSelected()) {
-                    
+                    String l = JOptionPane.showInputDialog(null, "Introduce el valor del lado: ");
+                    double lado = Double.parseDouble(l);
+                    Triangulo triangulo = new Traingulo(lado);
+                    JOptionPane.showMessageDialog(null,"El area del triangulo es: "+triangulo.calcularArea());  
                 }else{
-                    
+                    String l = JOptionPane.showInputDialog(null, "Introduce el valor del lado: ");
+                    double lado = Double.parseDouble(l);
+                    Traingulo triangulo = new Triangulo(lado);
+                    JOptionPane.showMessageDialog(null,"El area del triangulo es: "+triangulo.calcularPerimetro());    
                 }             
             }
             break;
