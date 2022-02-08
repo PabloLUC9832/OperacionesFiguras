@@ -1,6 +1,5 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Base64;
 
 import javax.swing.JOptionPane;
 
@@ -28,7 +27,7 @@ public class EventCombo implements ActionListener{
                     String l = JOptionPane.showInputDialog(null, "Introduce el valor del lado: ");
                     double lado = Double.parseDouble(l);
                     Cuadrado cuadrado = new Cuadrado(lado);
-                    JOptionPane.showMessageDialog(null,"El area del cuadrado es: "+cuadrado.calcularPerimetro());  
+                    JOptionPane.showMessageDialog(null,"El perimetro del cuadrado es: "+cuadrado.calcularPerimetro());  
                 }
             }
             break;
@@ -41,7 +40,7 @@ public class EventCombo implements ActionListener{
                     String a = JOptionPane.showInputDialog(null, "Introduce el valor de la altura: ");
                     double altura = Double.parseDouble(a);
                      Rectangulo rectangulo = new Rectangulo(base, altura);
-                    JOptionPane.showMessageDialog(null,"El area del cuadrado es: "+rectangulo.calcularArea());
+                    JOptionPane.showMessageDialog(null,"El area del rectangulo es: "+rectangulo.calcularArea());
                 }else{
                     String b = JOptionPane.showInputDialog(null, "Introduce el valor de la base: ");
                     double base = Double.parseDouble(b);
@@ -49,7 +48,7 @@ public class EventCombo implements ActionListener{
                     double altura = Double.parseDouble(a);
 
                     Rectangulo rectangulo = new Rectangulo(base, altura);
-                    JOptionPane.showMessageDialog(null,"El perimetro del cuadrado es: "+rectangulo.calcularPerimetro());
+                    JOptionPane.showMessageDialog(null,"El perimetro del rectangulo es: "+rectangulo.calcularPerimetro());
                 }                    
             break;
 
@@ -83,7 +82,7 @@ public class EventCombo implements ActionListener{
                     String r = JOptionPane.showInputDialog(null, "Introduce el valor del radio: ");
                     double radio = Double.parseDouble(r);
                     Circulo circulo = new Circulo(radio);
-                    JOptionPane.showMessageDialog(null,"El area del circulo es: "+circulo.calcularPerimetro());                           
+                    JOptionPane.showMessageDialog(null,"El perimetro del circulo es: "+circulo.calcularPerimetro());                           
                 }                
             }
             break;
